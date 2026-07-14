@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PreRegisterForm from "./pre-register-form";
 
 export default function Home() {
   return (
@@ -43,15 +44,7 @@ export default function Home() {
             skies, and be first in line when game opens.
           </p>
 
-          <div className="mt-8 flex w-full max-w-xs flex-col gap-3 sm:flex-row">
-
-            <a
-              href="#"
-              className="inline-flex h-12 flex-1 items-center justify-center rounded-sm border border-[#0d5f91]/28 bg-white/60 px-7 text-sm font-black uppercase tracking-[0.2em] text-[#062033] shadow-[0_18px_45px_rgba(27,119,175,0.12)] backdrop-blur-sm transition hover:bg-white sm:h-14"
-            >
-               Pre-Register Soon
-            </a>
-          </div>
+          <PreRegisterForm />
         </div>
       </section>
     </main>
