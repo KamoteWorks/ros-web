@@ -132,7 +132,7 @@ export default function PreRegisterForm() {
 
   if (isRegistered) {
     return (
-      <div className="mt-8 flex w-full max-w-xl flex-col gap-3">
+      <div className="mt-6 flex w-full max-w-xl flex-col gap-3 sm:mt-8">
         <p
           role="status"
           className="text-center text-sm font-bold leading-6 text-[#4CAA43] sm:text-base"
@@ -142,7 +142,7 @@ export default function PreRegisterForm() {
         <a
           href={launcherPath}
           download
-          className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-sm bg-black px-6 py-3 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-[0_10px_24px_rgba(0,0,0,0.35)] transition hover:bg-[#151515] focus:outline-none focus:ring-2 focus:ring-white/70 sm:min-h-14"
+          className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-sm bg-black px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white shadow-[0_10px_24px_rgba(0,0,0,0.35)] transition hover:bg-[#151515] focus:outline-none focus:ring-2 focus:ring-white/70 sm:min-h-14 sm:px-6 sm:text-sm sm:tracking-[0.12em]"
         >
           Download ROS Legacy Installer
         </a>
@@ -151,7 +151,7 @@ export default function PreRegisterForm() {
   }
 
   return (
-    <div className="mt-8 flex w-full max-w-xl flex-col gap-3">
+    <div className="mt-6 flex w-full max-w-xl flex-col gap-3 sm:mt-8">
       <form
         onSubmit={handleSubmit}
         className="flex w-full flex-col gap-3 sm:flex-row"
@@ -166,12 +166,12 @@ export default function PreRegisterForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="Enter your email"
-          className="min-h-12 flex-1 rounded-sm border-0 bg-white px-4 text-sm font-bold text-[#08111f] outline-none transition placeholder:text-[#6f7887] focus:ring-2 focus:ring-red-500 sm:min-h-14"
+          className="min-h-12 w-full min-w-0 flex-1 rounded-sm border-0 bg-white px-4 text-sm font-bold text-[#08111f] outline-none transition placeholder:text-[#6f7887] focus:ring-2 focus:ring-red-500 sm:min-h-14"
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex min-h-12 cursor-pointer items-center justify-center rounded-sm bg-black px-7 text-sm font-black uppercase tracking-[0.12em] text-white shadow-[0_10px_24px_rgba(0,0,0,0.35)] transition hover:bg-[#151515] focus:outline-none focus:ring-2 focus:ring-white/70 disabled:cursor-not-allowed disabled:opacity-70 sm:min-h-14"
+          className="inline-flex min-h-12 w-full cursor-pointer items-center justify-center rounded-sm bg-black px-5 text-xs font-black uppercase tracking-[0.1em] text-white shadow-[0_10px_24px_rgba(0,0,0,0.35)] transition hover:bg-[#151515] focus:outline-none focus:ring-2 focus:ring-white/70 disabled:cursor-not-allowed disabled:opacity-70 sm:min-h-14 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.12em]"
         >
           {isSubmitting ? "Submitting..." : "Pre-Register"}
         </button>
@@ -179,7 +179,7 @@ export default function PreRegisterForm() {
       {errorMessage ? (
         <p
           role="alert"
-          className="rounded-sm bg-black/45 px-4 py-3 text-center text-sm font-bold leading-6 text-red-200"
+          className="rounded-sm bg-black/45 px-3 py-3 text-center text-sm font-bold leading-6 text-red-200 sm:px-4"
         >
           {errorMessage}
         </p>
