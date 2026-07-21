@@ -1,9 +1,10 @@
 import Image from "next/image";
 import PreRegisterForm from "./pre-register-form";
+import Footer from "./footer";
 
 export default function Home() {
   return (
-    <main className="min-h-svh overflow-hidden bg-[#eaf7ff] text-white">
+    <main className="overflow-hidden bg-[#eaf7ff] text-white">
       <section className="relative flex min-h-svh items-center justify-center overflow-hidden px-4 py-8 sm:px-8 sm:py-10">
         <Image
           src="/bg.png"
@@ -47,6 +48,7 @@ export default function Home() {
           <PreRegisterForm />
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
